@@ -22,4 +22,4 @@ Python, HTML, CSS, Bootstrap, JavaScript, Plotly, Leaflet Maps, Flask
 - It has found that home invasion and unintentional shootings are the types of  gun shootings that are occurring most in united states, as compared to other shooting types like defensive usage, murders/suicide and mass shootings. So, based on the study, the gun shootings related to home invasion were about 35% of yearly gun shootings, followed by unintentional shootings then defensive use and then murder suicides, and then mass shootings.
 
 
-![marker_cluster](Gun_Violence/static/assets/images/marker_cluster.png)
+![marker_cluster](Gun_Violence/static/assets/images/marker_cluster.PNG)
