@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen">  -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Our own CSS stylesheet -->
+   
+    <link rel="stylesheet" href="../static/css/styles.css" media="screen">
+
+  </head>
+
+  <body>
+      {% extends "layout.html" %}
+      {% block content %}
+      <div class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <h1 class="description-header" style="font-size:36px">Gun Violence from Jan 2014 to Mar 2018 on a monthly basis</h1>
+            <hr class="description-hr"/>
+          </div>
+      </div>
+        <!-- End of container -->
+       
+        <div id="plot"></div>
+        <!-- <div id="barchart"></div>
+        <div id="piechart"></div> -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+        
+        <script src="../static/js/line.js" ></script>
+        <div class="container">
+          <section class="row">
+            <div class="col-md-11">
+              <article class="description-content">
+                <h1 class="description-header">Line Chart: Gun Violence (Jan 2014 to Mar 2018)</h1>
+                <hr class="description-hr"/>
+                <img src="../static/assets/images/gun_aman.jpg" alt="" id="description-image"/>
+                <p>This line chart displays the number of gun violence incidents which resulted in either death or injuries as well as the total gun count per incident per month from the years of 2014 through 2018 across the United States of America.</p>
+                <p>During those four years and three months the trends in count of gun violence incidents resulting in injury or death remained relatively the same with a few intersting minor spikes and drops. However the count of guns involved in these incidents experienced a major spike in December 2014 and was followed by an even more massive spike in August 2016.</p>
+                <p>In regards to the minor peaks and drops observed in the trends of gun related injuries and killings it appears that year after year the same spikes and drops occured in specific months. From 2014 to 2018 every year a drop in the number of gun related injuries/killings occured in February. On average there were 505 less gun related injuries and 216 fewer gun related deaths. </p>
+                <table style="width:100%" border="2">
+                  <thead>
+                    <tr>
+                      <th colspan="3">Gun Violence Incidents</th>
+                    </tr>
+                    <tr>
+                      <th>Drop Months</th>
+                      <th>Injuries</th>
+                      <th>Killings</th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jan 2014 → Feb 2014</td>
+                      <td>- 652</td>
+                      <td>- 225</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Jan 2015 → Feb 2015</td>
+                      <td>- 430</td>
+                      <td>-253</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Jan 2016 → Feb 2016</td>
+                      <td>- 386</td>
+                      <td>- 155</td>
+                      
+                    </tr> 
+                    <td>Jan 2017 → Feb 2017</td>
+                    <td>- 407</td>
+                    <td>- 215</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Jan 2018 → Feb 2018</td>
+                    <td>- 652</td>
+                    <td>- 233</td>
+                    
+                  </tr>    
+                  <tr>
+                    <th colspan="3"></th>
+                  </tr>
+                  <tr>
+                    <th>Spike Months</th>
+                    <th>Injuries</th>
+                    <th>Killings</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jun 2014 → Jul 2014</td>
+                    <td>+ 354</td>
+                    <td>+ 35</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Jun 2015 → Jul 2015</td>
+                    <td>+ 255</td>
+                    <td>+ 201</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Jun 2016 → Jul 2016</td>
+                    <td>+ 534</td>
+                    <td>+ 123</td>
+                    
+                  </tr> 
+                  <td>Jun 2017 → Jul 2017</td>
+                  <td>+ 339</td>
+                  <td>+ 25</td>
+                  
+                </tr>
+                <tr>
+                  <td>Jun 2018 → Jul 2018</td>
+                  <td>+ 380</td>
+                  <td>+ 27</td>
+                  
+                </tr>                
+                  </tbody>
+                  <tfoot>
+                 
+                  </tfoot>
+                </table>                
+                <p>Conversly every year an increase in the number of gun related injuries/killings occured in February. On average there were 372 more gun related injuries and 82 more gun related killings. It is hard to say exactly why these same trends occur year after year. It is purely speculation, but one could assume that perhaps the month of love (February) puts people in a more caring mindset which may in turn lead to fewer occasions of gun violence. Similarily to how Valentines Day in Feburary led to a drop in violence it very well may be that The Fourth of July is the reason more gun injuries occur during July. Every year several American's are injured due to people shooting firearms into the air to celebrate the holiday. Of course more research and time would be needed to definetly say that those holidays cause an increase or decrease in gun violence.</p>    
+                <p>The one trend that made a clear and apparent spike the count of guns found during these gun violence incidents. In late 2014 the first gun count spike occcured. Up until that point the average gun count per month was around 550, but then the average shot up to nearly 3200 per month. The average gun count per month remained the same until August of 2016 where the averge gun count doubled and remained right around 6250 guns involved in gun violence related incidents. Intrestingly enough, the count of guns had no direct relationship to the number of gun injuiries/killings. Throughout the 51 month period the number of gun related injuiries/killings remained just about the same even though the number of guns invovled made a drastic increase. It would be a fair assumption to make that more guns involved would lead to more injuries and killings but that was not the case in this instance.</p>
+              </article>
+            </div>
+ 
+                
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+         There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% endblock %}
+    
+  </body>
+
+</html>

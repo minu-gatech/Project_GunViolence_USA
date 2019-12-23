@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+  <!-- Boostrap Stylesheet -->
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
+  
+   <!--D3 cdn-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script> -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+  <!-- Our own CSS stylesheet -->
+ 
+  <link rel="stylesheet" href="../static/css/styles.css" media="screen"> 
+  <link rel="stylesheet" href="../static/css/style.css" media="screen">
+
+  
+  <!-- Leaflet heatmap plugin-->
+  <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
+
+  </head>
+
+  <body>
+      {% extends "layout.html" %}
+      {% block content %}
+    
+    
+      <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-11">
+            <h1 class="description-header" style="font-size:45px">Gun Violence in USA : Year 2013 - 2018</h1>
+            <h1></h1>
+            <hr class="description-hr"/>
+           
+        </div>
+
+
+        <div class="col-md-11">
+          <div id="map"></div>
+        </div> 
+ 
+         <div class="col-md-11">
+          <h4 class="header2">(Heat Map)</h4>
+        </div>
+       
+        <div class="container">
+          <section class="row">
+            <div class="col-md-11">
+              <article class="description-content">
+         
+                <h4 class="description-header">Summary:</h4><hr>
+                <div style="font-size: medium;">
+                  <ul>
+                  <li>According to the map, east coast seems to have more gun violence incidents happened as compared to west coast in the years between 2013 and 2018.</li>
+                  <li>On West Coast- Log Angeles and Sans Francisco area and On East Coast-  Chicago, New York City, Washington DC, Baltimore, Philadelphia, New Orleans, Houston have been affected most. </li>
+                  <li>Major cities have highest gun shooting incidents number, it means as cities tend to have higher population so chances of gun violence are higher in cities as compared to suburbs.</li>
+                  </ul> 
+              </article>
+              </div> 
+
+
+  
+
+    </div>
+    <!-- End of container -->
+
+
+
+
+
+    <!-- javascript files -->
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <script type="text/javascript" src="../static/js/heatmap_logic.js"></script>
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+         There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    
+    <!-- Our own CSS stylesheet -->
+   
+    <link rel="stylesheet" href="../static/css/styles.css" media="screen"> 
+    <link rel="stylesheet" href="../static/css/style.css" media="screen">
+    <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+   
+  <!-- Marker Cluster JS & CSS -->
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+  </head>
+
+  <body>
+
+    {% extends "layout.html" %}
+    {% block content %}
+    <!-- <div class="container">
+      <div class="row" > 
+        <img src="static/assets/images/gun2.jpg" height="500px"/>
+      </div>
+    </div> -->
+   <br><br>
+
+   <div class="container">
+    <section class="row">
+      <div class="col-md-10">
+  
+          <h1 class="description-header" style="font-size:45px" align="center">Gun Violence in The United States of America</h1>
+          <hr class="description-hr"/>
+          <img src="static/assets/images/gun_flag.jpg" height="530px" />
+        <article class="description-content">
+          <p style="color:turquoise;font-size:30px">DataVisualizations-Project</p>
+          <p style="font-size:27px">Inspiration</p>
+          <p>There has been a steady increase in gun violence over the past decade and this trend shows no signs of slowing down. In fact, it is not uncommon to turn on the news and hear about a new mass shooting event that has occured somewhere in the nation. This year alone there have been mass shooting events in Virginia Beach, Virginia (13 Killed/4 Injured), El Paso, Texas (22 Killed/24 Injured), and Dayton, Ohio (10 Killed/27 Injured). In total there were 409 mass shooting events in 2019 resulting in 486 killed and 1642 injured. Gun control is a very sensitive and widely debated topic in The United States of America which has caused it to become highly politicised.</p>
+          <p>The two major political parties in the United States (Democrats/Republicans) have drastically different views and opinions on the subject. Until such a time comes where both sides can come to agreement on gun control it appears that the current positive trend in gun violence will continue to occur. This is what provided the inspiration for the creation of this website. As Data Analysts we can help analyze this dire situation by studying gun violence data and help provide well informed predictions about future trends in order to build strategies that will eventually minimize gun violence, and promote gun safety.</p>
+          <p style="font-size:27px">Goal</p>
+          <p> Our goal was to create a fully functional web visualization dashboard that provides gun violence data in an easily understandable manner.<br><br>
+            1)	Create a maps tab which would include:<br> • Cluster Map of gun violence that occured in America during 2018<br> • Heat Map of gun violence between 2013-2018<br> • Choropleth Map of mass shootings in 2019
+            <br><br> 2) Ceate a charts tab which would include:<br> • Line Chart displaying Gun Violence from Jan 2014 to Mar 2018 on a monthly basis <br>• Bar Chart displaying Gun Violence from Jan 2014 to Dec 2017 Yearly Reports<br>• Pie Chart displaying Types of Gun Violence during 2014-2019 on a yearly basis </p>
+          <p style="font-size:27px">Data Source</p>
+          <p>Our dataset was obtained from “Gun Violence Data” (https://www.kaggle.com/jameslko/gun-violence-data) as well as https://www.gunviolencearchive.org. This dataset contains more than 260k gun violence incidents, in the US between January 2013 and March 2018 , with detailed information about each incident, in CSV format. In order to collect 2019 data we had to download the data from https://www.gunviolencearchive.org in csv format.</p>
+          <p style="font-size:27px">User-driven interaction</p>
+          <p>This website provides the user with not only a fully interactive navigation bar but also the ability to switch the website into darkmode with the click of a button. All of the maps and charts are interactive as well.</p>
+        </article>
+        </div>  
+        
+           
+  
+ 
+    <!-- End of container -->
+
+
+  <!-- java script files  -->
+  <script type="text/javascript" src="../static/js/config.js"></script>
+  <script type="text/javascript" src="../static/js/markercluster_logic.js"></script>
+  
+
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    {% endblock %}
+  </body>
+
+</html>

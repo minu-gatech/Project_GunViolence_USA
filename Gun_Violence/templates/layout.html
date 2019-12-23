@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
+    
+    <!-- Our own CSS stylesheet -->
+   
+    <link rel="stylesheet" href="../static/css/styles.css" media="screen"> 
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid navbar-custom">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-9 phone-nav">
+              <!-- <a class="navbar-brand" href="#" id="logo">GUN VIOLENCE IN USA</a> -->
+                 <a class="navbar-brand" href="{{ url_for('index') }}" id="logo">GUN VIOLENCE IN USA</a> 
+            </div>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li class="dropdown">
+                  <a href="#" class="map-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="maptab"><a href="{{ url_for('clustermap') }}" >2018 Gun Violence </a></li>
+                      <li class="maptab"><a href="{{ url_for('heatmap') }}">2013-2018 Gun Violence</a></li>
+                      <li class="maptab"><a href="{{ url_for('choroplethmap') }}">2019 Mass Shootings</a></li>
+                    </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="chart-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Charts <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="charttab"><a href="{{ url_for('linechart') }}" >2014-2018 Monthly Reports</a></li>
+                  <li class="charttab"><a href="{{ url_for('barchart') }}" >2014-2017 Yearly Reports</a></li>
+                  <li class="charttab"><a href="{{ url_for('piechart') }}">2014-2019 Shootings Types</a></li>
+                </ul>
+              </li>
+              <li class="datatab"><a href="{{ url_for('data') }}">Data</a></li>
+              
+            </ul>  
+              
+            
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav> <!-- End of navbar -->
+    <div class="container">
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
+    <script>
+      new Darkmode().showWidget();
+    </script> 
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+  
+        
+    </body>   
+</html>     

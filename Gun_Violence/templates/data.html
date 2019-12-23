@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
+    
+    <!-- Our own CSS stylesheet -->
+   
+    <link rel="stylesheet" href="static/css/styles.css" media="screen"> 
+    <link type="text/css" rel="stylesheet" href="static/css/stylez.css" media="screen">
+  </head>
+
+  <body>
+      {% extends "layout.html" %}
+      {% block content %}
+
+<div class="container">
+  <section class="row">
+    <div class="col-md-11">
+      <h1 class="description-header" style="font-size:44px">Gun Violence in The United States of America</h1>
+      <hr class="description-hr"/>
+      <article class="description-content">
+        
+        <!-- <hr> -->
+        
+        <div id="outerbox">
+          <div id="sliderbox">
+            <img src="static/assets/images/five_year.png" height="500px" width="900">
+            <img src="static/assets/images/death_2019.png" height="500px" width="900">
+            <img src="static/assets/images/injured_2019.png" height="500px" width="900">
+            <img src="static/assets/images/officer_shot.png" height="500px" width="900">
+          </div>
+        </div>
+        <br>
+        <p style="font-size:30px" >Gun Violence Archive</p>
+        <hr>
+          <p>The Gun Violence Archive is an online archive of gun violence incidents collected from over 6,500  law enforcement, media, government and commercial sources daily in an effort to provide near-real time data about the results of gun violence. GVA is an independent data collection and research group with no affiliation with any advocacy organization. (Source: https://www.gunviolencearchive.org/about)</p>
+          <br>
+          <p style="font-size:30px" id="smallp">Kaggle</p>
+          <hr>
+          <p style="font-size:16px">The Gun Violence dataset was created by James Ko and was last updated two years ago. James collected the data provided in the csv by:
+            <p style="font-size:18px" >Stage 1:</p>
+            <p>• For each date between 1/1/2013 and 3/31/2018, a Python script queried all incidents that happened at that particular date, then scraped the data and wrote it to a CSV file. Each month got its own CSV file, with the exception of 2013, since not many incidents were recorded from then.
+          </p>
+          <p style="font-size:18px" >Stage 2:</p>
+          <p>• Each entry was augmented with additional data not directly viewable from the query results page, such as participant information, geolocation data, etc.
+            </p>
+            <p style="font-size:18px" >Stage 3:</p>
+            <p>• The entries were sorted in order of increasing date, then merged into a single CSV file.</p>
+         </p>
+         
+         
+        
+      </article>
+      </div>  
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+
+</html>

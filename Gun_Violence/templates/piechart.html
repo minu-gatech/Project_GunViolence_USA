@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" media="screen"> 
+  
+    <!-- Our own CSS stylesheet -->
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" media="screen">
+    <link rel="stylesheet" href="../static/css/style.css" media="screen">
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    {% extends "layout.html" %}
+    {% block content %}
+    
+      <!-- Start of container -->
+      <div class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <h1 class="description-header" style="font-size:45px">Types of Gun Violence in USA : Year 2014 - 2019</h1>
+            <hr class="description-hr"/>
+          </div>
+      </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="well">
+            <h5>SELECT Year:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Gun Usage - Yearly Data</h3>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="pie"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container" >
+      <section class="row">
+        <div class="col-md-12">
+          <article class="description-content">
+            <h1 class="description-header">Pie Chart: Gun Violence (2014-2019)</h1>
+            <hr class="description-hr"/>
+            <img src="../static/assets/images/gun2.jpg" alt="" id="description-image"/>
+            <p>This pie chart displays the type of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2019 across the United States of America. The categories included:<br>Mass Shootings<br>Murder Suicides<br>Defensive Use<br>Unintentional Shootings<br>Home Invasions</p>
+            <p>The data displayed shows how home invasion leads to the most incidents of gun violence. It typically leads to about 35% of yearly gun shootings. Defensive shootings follow close behind home invasions for the second leading cause of gun shootings. This trend remained steady throuhgout the duration of this study. One intresting spike did occur in the number of unintentional shootings in the years of 2016 and 2017, it was never able to topple defensive shootings but it was certainly a large portion of yearly gun shootings.</p>
+          
+        </article>
+          
+        </div>
+   
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+  
+    <script src="../static/js/pie_map.js"></script>
+
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+
+</html>

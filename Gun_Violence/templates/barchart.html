@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Gun Violence Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen">  -->
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Our own CSS stylesheet -->
+   
+    <link rel="stylesheet" href="../static/css/styles.css" media="screen">
+
+  </head>
+
+  <body>
+      {% extends "layout.html" %}
+      {% block content %}
+      <div class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <h1 class="description-header" style="font-size:38px">Gun Violence from Jan 2014 to Dec 2017 Yearly Reports </h1>
+            <hr class="description-hr"/>
+          </div>
+      </div>
+    
+      
+        <div id="barchart"></div> 
+      
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        
+        <script src="../static/js/line.js"></script>
+        <div class="container" >
+          <section class="row">
+            <div class="col-md-10">
+              <article class="description-content">
+                <br>
+                <h1 class="description-header">Bar Chart: Gun Violence (2014-2017)</h1>
+                <hr class="description-hr"/>
+                <img src="../static/assets/images/gun_bar.jpg" alt="" id="description-image"/>
+                <p>This bar chart displays the number of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2017 across the United States of America.</p>
+                <p>During those four years of time each succesive year resulted in more incidents of gun violene (resulting in death/injuries) than the previous year. However there was an intresting trend in the data.</p>
+                <table style="width:100%" border="2">
+                  <thead>
+                    <tr>
+                      <th colspan="3">Gun Violence Incidents</th>
+                    </tr>
+                    <tr>
+                      <th>Years</th>
+                      <th>Injuries</th>
+                      <th>Killings</th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2014 → 2015</td>
+                      <td>+ 3965</td>
+                      <td>+ 927</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>2015 → 2016</td>
+                      <td>+ 3613</td>
+                      <td>+ 1582</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>2016 → 2017 </td>
+                      <td>+ 123</td>
+                      <td>+ 445</td>
+                      
+                    </tr>                    
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th  colspan="3">Increase in gun violence incidents resulting in death/injuries compared to the previous years total</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              <p>After 2014, for the next two years, there was an increase of 3750+ gun related injuries and 1250+ gun related deaths in total per year on average. This positve trend depicted a grim future in regards to gun related violence in the United States. In fact the largest mass shooting in modern United States history occured in October, 2017 (Las Vegas Shootings). That coupled with an insignificant year for federal gun reform it appeared that 2017 would suffer another increase of 3750+ gun related injuries and 1250+ gun related deaths.</p>
+              <p>Fortunately that did not occur, thanks to a good year for state level action. More than 30 laws preventing gun violence passed in state legislatures, and more than 200 had been passed since 2013, according to a new report from a gun safety group. It appears that the increased gun reforms on a state level helped reduce the positive trend in gun related incidents. This indicates that there may just be hope for less gun related violence in the United States.</p>
+              <p>If creating gun reform on a state level lead to a 97% decrease in the trend of gun injuries and a 50% decrease in the trend of gun killings it can only be assumed that an even more drastic decrease would occur if national gun reform was implimented. In fact, the total number of gun related incidents may begin to decrease as a whole. However, until such reforms are passed by congress the only thing in our power to do is monitor the data closely and hope for the best.</p>
+              <p></p>
+            </article>
+              
+            </div>
+            <div class="col-md-10">
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+         There is HOPE with GUN CONTROL
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+
+</html>
