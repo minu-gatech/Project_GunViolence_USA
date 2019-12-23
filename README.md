@@ -12,7 +12,7 @@ Kaggle.com is the Data source for this project. We chose a dataset named “Gun 
 ## Questions-
 - What’s the trend of gun violence in US? 
 - Is it decreasing on increasing over the years? 
-- Which states has highest % of mass shootings 
+- Which states has highest % of mass shootings?
 - What type of gun shootings are occurring most?
 
 ## Skills Used:
