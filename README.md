@@ -21,3 +21,5 @@ Python, HTML, CSS, Bootstrap, JavaScript, Plotly, Leaflet Maps, Flask
  The number of mass shootings across the US thus far in 2019 has outpaced the number of days this year.  Before this year has even ended, 2019 has already had more mass shootings than any year since 2014.  As of December 1st, which is the 335th day of the year, there have been 385 mass shootings in U.S
 - It has found that home invasion and unintentional shootings are the types of  gun shootings that are occurring most in united states, as compared to other shooting types like defensive usage, murders/suicide and mass shootings. So, based on the study, the gun shootings related to home invasion were about 35% of yearly gun shootings, followed by unintentional shootings then defensive use and then murder suicides, and then mass shootings.
 
+
+![marker_cluster](static/assets/images/marker_cluster.png)
