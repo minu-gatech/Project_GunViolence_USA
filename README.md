@@ -23,3 +23,9 @@ Python, HTML, CSS, Bootstrap, JavaScript, Plotly, Leaflet Maps, Flask
 
 
 ![marker_cluster](Gun_Violence/static/assets/images/marker_cluster.PNG)
+![marker_cluster](Gun_Violence/static/assets/images/heatmap.PNG)
+![marker_cluster](Gun_Violence/static/assets/images/choroplethmap.PNG)
+![marker_cluster](Gun_Violence/static/assets/images/types.PNG)
+![marker_cluster](Gun_Violence/static/assets/images/monthly.PNG)
+![marker_cluster](Gun_Violence/static/assets/images/yearly.PNG)
+
