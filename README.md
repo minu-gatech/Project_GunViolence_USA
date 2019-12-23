@@ -1,5 +1,8 @@
 # Project_GunViolence_USA
 
+![marker_cluster](Gun_Violence/static/assets/images/gun_flag.jpg)
+
+
 ### Inspiration
 There has been steady increase in Gun Violence over the past decade and it continues to rapidly increase . 30,000 women, men & children are killed in America every year by guns which means almost 100 people every day. Data scientists and statisticians can help analyze this dire situation by studying gun violence data and make informed predictions about future trends in order to build strategies that will eventually minimize , control gun violence and promote gun safety.
 
