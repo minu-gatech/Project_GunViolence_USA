@@ -1,5 +1,8 @@
 # Project_GunViolence_USA
 
+![marker_cluster](Gun_Violence/static/assets/images/gun_flag.jpg)
+
+
 ### Inspiration
 There has been steady increase in Gun Violence over the past decade and it continues to rapidly increase . 30,000 women, men & children are killed in America every year by guns which means almost 100 people every day. Data scientists and statisticians can help analyze this dire situation by studying gun violence data and make informed predictions about future trends in order to build strategies that will eventually minimize , control gun violence and promote gun safety.
 
@@ -9,7 +12,7 @@ Kaggle.com is the Data source for this project. We chose a dataset named “Gun 
 ## Questions-
 - What’s the trend of gun violence in US? 
 - Is it decreasing on increasing over the years? 
-- Which states has highest % of mass shootings 
+- Which states has highest % of mass shootings?
 - What type of gun shootings are occurring most?
 
 ## Skills Used:
@@ -23,9 +26,16 @@ Python, HTML, CSS, Bootstrap, JavaScript, Plotly, Leaflet Maps, Flask
 
 
 ![marker_cluster](Gun_Violence/static/assets/images/marker_cluster.PNG)
+
+![marker](Gun_Violence/static/assets/images/marker.PNG)
+
 ![marker_cluster](Gun_Violence/static/assets/images/heatmap.PNG)
+
 ![marker_cluster](Gun_Violence/static/assets/images/choroplethmap.PNG)
+
 ![marker_cluster](Gun_Violence/static/assets/images/types.PNG)
+
 ![marker_cluster](Gun_Violence/static/assets/images/monthly.PNG)
+
 ![marker_cluster](Gun_Violence/static/assets/images/yearly.PNG)
 
