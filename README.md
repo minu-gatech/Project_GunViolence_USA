@@ -1,4 +1,4 @@
-# Project_GunViolence_USA
+# Project: GunViolence in USA
 
 ![marker_cluster](Gun_Violence/static/assets/images/gun_flag.jpg)
 
