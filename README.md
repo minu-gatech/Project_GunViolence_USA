@@ -16,7 +16,7 @@ Kaggle.com is the Data source for this project. We chose a dataset named “Gun 
 - What type of gun shootings are occurring most?
 
 ## Skills Used:
-Python, HTML, CSS, Bootstrap, JavaScript, Plotly, Leaflet Maps, Flask
+Python, HTML, CSS, Bootstrap, JavaScript, Plotly.js, Leaflet.js, Flask, Jupyter Notebook
 
 ## Summary Findings-
 - The result of our analysis showed that east coast had highest number of gun shooting incidents from year 2013 till 2018
